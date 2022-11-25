@@ -6,7 +6,7 @@ export default function Home() {
     const [email, setEmail] = useState('')
   return (
       <>
-      <section className="w-full h-screen px-2 flex flex-col justify-center" style={{backgroundImage: 'url(SGN_LA_CHIRIEGA_-3417.jpg)', backgroundPositionY: '25%'}}>
+      <section className="bg-cover w-full h-screen px-2 flex flex-col justify-center" style={{backgroundImage: 'url(SGN_LA_CHIRIEGA_-3417.jpg)'}}>
         <div className="container mx-auto flex flex-col text-white text-center items-center">
           <picture className='mx-auto flex items-center justify-center'>
                 <img className='md:w-2/3'src="1500w/ARTEFACTO.png" alt="artefacto"/>
@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 
 
-      <section className='w-full h-screen relative' style={{backgroundImage: 'url(SGN_LA_CHIRIEGA_-1446.png)'}}>
+      <section className='bg-cover w-full h-screen relative' style={{backgroundImage: 'url(SGN_LA_CHIRIEGA_-1446.png)'}}>
       <picture>
           <img className='w-24 md:w-80 absolute' alt="escudo" src="1500w/escudo.png" style={{left: '50%', bottom: '0', transform: 'translate(-50%, 30%)'}}/>
       </picture>

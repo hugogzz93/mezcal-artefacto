@@ -166,3 +166,21 @@ input:focus:not(:read-only):not(:disabled), textarea:focus:not(:read-only):not(:
     @apply border-slate-300;
     @apply border;
 }
+
+/* .section-img { */
+/*     background-size: cover; */
+/* } */
+
+/* @media (max-width: 800px) { */
+
+/*     .section-img { */
+/*         /1* background-position: 50% 25%; *1/ */
+/*     } */
+
+/*     .other--section-img { */
+/*         /1* background-position: center; *1/ */
+
+
+/*     } */
+
+/* } */
