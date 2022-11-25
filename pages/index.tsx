@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Image from 'next/image'
 import { TextField } from "../components"
 
 export default function Home() {
@@ -25,9 +26,15 @@ export default function Home() {
       <section className="w-full min-h-screen px-2 flex flex-col justify-center bg-white py-20 overflow-x-hidden">
         <div className="container mx-auto flex flex-col items-center">
           <div className="flex items-center">
+      <picture>
                 <img className='w-20 md:w-40' src="1500w/oax-mx.png" alt="oax-mx"/>
+      </picture>
+      <picture>
                 <img className='w-24 mx-12 md:mx-40 md:w-96' src="1500w/LOGO_ARTEFACTO.png" alt="oax-mx"/>
+      </picture>
+      <picture>
                 <img className='w-20 md:w-40' src="1500w/cien_agave.png" alt="oax-mx"/>
+      </picture>
           </div>
 
           <div className="text-bodoni text-4xl text-center mt-40">
@@ -40,14 +47,18 @@ export default function Home() {
         
       <div className="flex flex-col md:flex-row items-center w-full justify-between w-3/4">
       <div className="my-8 flex flex-col items-center">
+      <picture>
         <img className="w-52 h-40" src="1500w/espadin.png" alt=""/>
+      </picture>
         <div className="text-bodoni italic text-center text-3xl">
             Espadín<br/>
             (a. angustifolia Haw.)
         </div>
       </div>
       <div className="my-8 flex flex-col items-center">
+      <picture>
           <img className="w-52 h-40" src="1500w/tepeztate.png" alt=""/>
+      </picture>
           <div className="text-bodoni italic text-center text-3xl">
             Tepeztate<br/>
             (a. marmorata Roezl )
@@ -55,7 +66,9 @@ export default function Home() {
       </div>
 
       <div className="my-8 flex flex-col items-center">
+      <picture>
           <img className="w-52 h-40" src="1500w/chuparrosa.png" alt=""/>
+      </picture>
           <div className="text-bodoni italic text-center text-3xl">
             Chuparrosa<br/>
             (a. s.clasificación)
@@ -69,7 +82,9 @@ export default function Home() {
 
 
       <section className='w-full h-screen relative' style={{backgroundImage: 'url(SGN_LA_CHIRIEGA_-1446.png)'}}>
+      <picture>
           <img className='w-24 md:w-80 absolute' alt="escudo" src="1500w/escudo.png" style={{left: '50%', bottom: '0', transform: 'translate(-50%, 30%)'}}/>
+      </picture>
       </section>
 
       <footer className="flex flex-col md:flex-row text-center justify-between p-8 bg-black text-white py-32">
