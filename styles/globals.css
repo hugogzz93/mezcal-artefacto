@@ -1,8 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: refrigerator, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -23,4 +27,142 @@ a {
     color: white;
     background: black;
   }
+}
+
+@font-face {
+    font-family: 'bodoni';
+    src: url(../public/fonts/Bodoni_72.ttc);
+}
+
+
+.text-bodoni-itc {
+    font-family: bodoni-itc;
+}
+
+
+@font-face {
+    font-family: 'refrigerator';
+    src: url(../public/fonts/Refrigerator_Deluxe.otf);
+}
+
+.text-refrigerator {
+    font-family: refrigerator;
+}
+
+
+
+
+@font-face {
+    font-family: 'bodoni-itc';
+    src: url(../public/fonts/bodoni-seventytwo-itc-book-italic.otf);
+}
+
+@font-face {
+    font-family: 'bodoni';
+    src: url(../public/fonts/BodoniSvtyTwoITCTT-Bold-03.otf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bodoni';
+    src: url(../public/fonts/BodoniSvtyTwoITCTT-Book-01.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bodoni';
+    src: url(../public/fonts/BodoniSvtyTwoITCTT-BookIta-02.otf);
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+.text-bodoni {
+    font-family: bodoni;
+}
+
+
+/* ------------------ */
+/* Theme Inputs */
+/* ----------- */
+.theme__form-controller {
+    position: relative;
+    background: transparent;
+}
+
+textarea.theme__text-field {
+    padding-top: 8px;
+}
+
+.theme__text-field {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 1em;
+    font-size: inherit;
+    background: transparent;
+}
+
+
+.theme__text-field::placeholder {
+    color: white;
+}
+
+.theme__text-field-label {
+    position: absolute;
+    transform: translateY(-50%);
+    pointer-events: none;
+    top: 50%;
+    left: 1rem;
+    background: transparent;
+    padding: 0 0.5rem;
+    transition: top 200ms ease-in, left 200ms ease-in,
+        font-size 200ms ease-in, transform 200ms ease-in;
+}
+
+.theme__text-field:focus ~ .theme__text-field-label, 
+    .theme__text-field:not(:placeholder-shown).theme__text-field:not(:focus) 
+        ~.theme__text-field-label, .theme__text-field-label.active {
+    transform: translateY(0);
+    top: -0.5rem;
+    font-size: 0.8rem;
+}
+
+.theme__text-field:focus ~ .theme__text-field-label, .theme__text-field-label.focused {
+    color: var(--theme-active);
+}
+
+.theme__form-controller .react-datepicker-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.375rem;
+}
+
+.theme__form-controller .react-datepicker__input-container {
+    height: 100%;
+}
+
+input:read-only, input:read-only ~label{
+    --color: #999;
+    border-color: var(--color);
+    color: var(--color);
+}
+
+input:focus:not(:read-only):not(:disabled), textarea:focus:not(:read-only):not(:disabled) {
+    /* --color: var(--theme-active); */
+    border-color: var(--theme-active);
+}
+
+.theme__text-field-label--select {
+    /* transform: translateY(30%); */
+}
+
+.theme__select-container {
+    @apply border-slate-300;
+    @apply border;
 }
