@@ -8,7 +8,9 @@ export default function Home() {
       <>
       <section className="w-full h-screen px-2 flex flex-col justify-center" style={{backgroundImage: 'url(SGN_LA_CHIRIEGA_-3417.jpg)', backgroundPositionY: '25%'}}>
         <div className="container mx-auto flex flex-col text-white text-center items-center">
-            <img className='md:w-2/3'src="1500w/ARTEFACTO.png" alt="artefacto"/>
+          <picture className='mx-auto flex items-center justify-center'>
+                <img className='md:w-2/3'src="1500w/ARTEFACTO.png" alt="artefacto"/>
+          </picture>
         </div>
 
         <div className="flex flex-col text-white mx-auto px-8 md:px-0 mt-32">

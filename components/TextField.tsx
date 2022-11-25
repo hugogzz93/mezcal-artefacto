@@ -22,7 +22,7 @@ export const TextField: React.FC<IInputProps> = ({
     return (
         <div className="theme__form-controller flex flex-col p-5">
             <input className='theme__text-field outline-0 border border-white rounded-md uppercase'
-                placeholder=' ' type='text' name={name} value={value} placeholder={placeholder} onChange={onChange} readOnly={readOnly} disabled={disabled}/>
+                type='text' name={name} value={value} placeholder={placeholder} onChange={onChange} readOnly={readOnly} disabled={disabled}/>
 
             <label className='theme__text-field-label' htmlFor={name}>{label}</label>
             {isLoading && <div className="mx-2 loader loader--blue absolute top-0 right-0" style={{fontSize: '2px', position: 'absolute', top: 'calc(50% - 5em)', right: '5%'}}/>}
