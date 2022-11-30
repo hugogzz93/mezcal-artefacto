@@ -1,9 +1,40 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { TextField } from "../components"
 
+async function saveEmail(email: string) {
+    const response = await fetch('/api/emails', {
+        method: 'POST',
+        body: JSON.stringify({email})
+    })
+
+    if(!response.ok) {
+        throw new Error(response.statusText)
+    }
+    
+    return await response.json();
+}
+
 export default function Home() {
     const [email, setEmail] = useState('')
+    const [thankYou, setShowThankYou] = useState(false)
+
+    const storeEmail = () => {
+        try {
+            saveEmail(email).then(e => {
+                setShowThankYou(true)
+            })
+        } catch(e) {
+
+        }
+    }
+
+    useEffect(() => {
+        if(thankYou)
+            window.setTimeout(() => {
+                setShowThankYou(false)
+            }, 3000)
+    }, [thankYou])
   return (
       <>
       <section className="bg-cover w-full h-screen px-2 flex flex-col justify-center" style={{backgroundImage: 'url(SGN_LA_CHIRIEGA_-3417.jpg)'}}>
@@ -22,6 +53,12 @@ export default function Home() {
                 placeholder='Email...'
                 name='email-prompt'
             />
+      {email.length > 3 &&  <button onClick={storeEmail} className='my-4 border border-1 border-white bg-transparent text-white rounded-lg px-6 py-4'>Save</button>}
+      {thankYou && 
+              (
+                  <div className="text-md text-white uppercase w-full text-center">Email saved!</div>
+              )
+      }
           </div>
       </section>
 
